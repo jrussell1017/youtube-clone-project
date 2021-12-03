@@ -1,3 +1,14 @@
+# Group Members
+- Hector Ilarraza (Team Lead)
+- Xiaoming Yang
+- James Russell
+
+# Project Links
+
+- [Youbube Clone // Github Repository](https://github.com/jrussell1017/youtube-clone-project)
+- [Youtube Clone // Deployed Netlify Site](https://youtube-clone-34abc4.netlify.app/)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
