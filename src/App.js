@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import HomePage from "./component/HomePage";
 import AboutPage from "./component/AboutPage";
+import IndividualVideoPage from "./component/IndividualVideoPage";
 
 // NavBar
 //    Youtube
