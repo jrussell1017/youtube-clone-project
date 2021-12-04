@@ -1,27 +1,39 @@
-import logo from "./logo.svg";
 import "./App.css";
+import React, { Component } from "react";
+import { Route, Routes, Link } from "react-router-dom";
+import HomePage from "./component/HomePage";
+import AboutPage from "./component/AboutPage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+// NavBar
+//    Youtube
+//    Home
+//    About
+
+class App extends Component {
+  constructor() {
+    super();
+  }
+  render() {
+    return (
+      
         <div>
-          <p>
-            <strong>Hello World II.</strong>
-          </p>
+          {/* NavBar */}
+          <nav>
+            <p>Youtube</p>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+          </nav>
+
+          {/* Routes */}
+          <Routes>
+            <Route exact path="/" element= {<HomePage/>} />
+            <Route path="/about" element={<AboutPage/>} />
+          </Routes>
         </div>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+    );
+  }
 }
 
 export default App;
+
