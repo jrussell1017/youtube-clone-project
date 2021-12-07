@@ -3,11 +3,11 @@ import React, { Component } from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import HomePage from "./component/HomePage";
 import AboutPage from "./component/AboutPage";
+import IndividualVideoPage from "./component/IndividualVideoPage";
 import Search from "./component/Search";
 import search from "./component/search.css"
 import searchResults from "./component/searchResults.css"
 import SearchResults from "./component/SearchResults";
-
 
 // NavBar
 //    Youtube
