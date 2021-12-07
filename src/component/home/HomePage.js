@@ -1,9 +1,9 @@
 import { Component } from "react";
 
 class HomePage extends Component {
-    constructor(){
-        super()
-    }
+    // constructor(){
+    //     super()
+    // }
     render() {
         return(
             <div>Home Page</div>
