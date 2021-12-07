@@ -1,13 +1,17 @@
 import "./App.css";
 import React, { Component } from "react";
 import { Route, Routes, Link } from "react-router-dom";
-import HomePage from "./component/HomePage";
-import AboutPage from "./component/AboutPage";
+// Component
+import HomePage from "./component/home/HomePage";
+import AboutPage from "./component/about/AboutPage";
+
+// Data
+import { team } from "./data/team.js" 
+import IndividualVideoPage from "./component/IndividualVideoPage";
 import Search from "./component/Search";
 import search from "./component/search.css"
 import searchResults from "./component/searchResults.css"
 import SearchResults from "./component/SearchResults";
-
 
 // NavBar
 //    Youtube
@@ -15,12 +19,17 @@ import SearchResults from "./component/SearchResults";
 //    About
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.state = {
+      team,
+    }
+    // console.log(team)
   }
   render() {
+    const { team } = this.state;
+    // console.log(team)
     return (
-      
         <div>
           {/* NavBar */}
           <nav>
@@ -28,11 +37,10 @@ class App extends Component {
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
           </nav>
-
           {/* Routes */}
           <Routes>
-            <Route exact path="/" element= {<HomePage/>} />
-            <Route path="/about" element={<AboutPage/>} />
+            <Route exact path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage team={team} />} />
           </Routes>
           <Search />
           <br />
@@ -45,4 +53,3 @@ class App extends Component {
 }
 
 export default App;
-
