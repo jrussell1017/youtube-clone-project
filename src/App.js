@@ -1,13 +1,17 @@
 import "./App.css";
 import React, { Component } from "react";
 import { Route, Routes, Link } from "react-router-dom";
-
 // Component
 import HomePage from "./component/home/HomePage";
 import AboutPage from "./component/about/AboutPage";
 
 // Data
 import { team } from "./data/team.js" 
+import IndividualVideoPage from "./component/IndividualVideoPage";
+import Search from "./component/Search";
+import search from "./component/search.css"
+import searchResults from "./component/searchResults.css"
+import SearchResults from "./component/SearchResults";
 
 // NavBar
 //    Youtube
@@ -38,6 +42,10 @@ class App extends Component {
             <Route exact path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage team={team} />} />
           </Routes>
+          <Search />
+          <br />
+          <br />
+          <SearchResults />
         </div>
     
     );
