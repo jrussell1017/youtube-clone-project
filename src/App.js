@@ -4,14 +4,12 @@ import { Route, Routes, Link } from "react-router-dom";
 // Component
 import HomePage from "./component/home/HomePage";
 import AboutPage from "./component/about/AboutPage";
+import IndividualVideoPage from "./component/IndividualVideoPage";
+import Search from "./component/search/Search";
+import SearchResults from "./component/search/SearchResults";
 
 // Data
 import { team } from "./data/team.js" 
-import IndividualVideoPage from "./component/IndividualVideoPage";
-import Search from "./component/Search";
-import search from "./component/search.css"
-import searchResults from "./component/searchResults.css"
-import SearchResults from "./component/SearchResults";
 
 // NavBar
 //    Youtube
