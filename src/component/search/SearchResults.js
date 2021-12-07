@@ -1,5 +1,5 @@
-const { Component } = require("react");
-
+import { Component } from "react";
+import "./searchResults.css"
 
 class SearchResults extends Component {
     render() {
