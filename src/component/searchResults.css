@@ -1,0 +1,9 @@
+.search-results {
+   background-color: rgb(214, 216, 217); 
+   margin-left: 230px;
+   width: 760px;
+   padding: 1px 15px;
+   border-radius: 5px;
+   font-size: x-small;
+   color: rgb(70, 73, 75);
+}
