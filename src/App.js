@@ -1,12 +1,11 @@
 import "./App.css";
 import React, { Component } from "react";
 import { Route, Routes, Link } from "react-router-dom";
+
 // Component
 import HomePage from "./component/home/HomePage";
 import AboutPage from "./component/about/AboutPage";
-import IndividualVideoPage from "./component/IndividualVideoPage";
-import Search from "./component/search/Search";
-import SearchResults from "./component/search/SearchResults";
+
 
 // Data
 import { team } from "./data/team.js" 
@@ -40,10 +39,6 @@ class App extends Component {
             <Route exact path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage team={team} />} />
           </Routes>
-          <Search />
-          <br />
-          <br />
-          <SearchResults />
         </div>
     
     );
