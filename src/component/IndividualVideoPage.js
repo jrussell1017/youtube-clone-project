@@ -1,9 +1,9 @@
 import { Component } from "react";
 
 class IndividualVideoPage extends Component {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
   render() {
     return (
       <div>
