@@ -2,6 +2,7 @@ import { Component } from "react";
 import "./search.css"
 import SearchList from "./SearchList";
 import "./searchResults.css"
+import { Link } from 'react-router-dom'
 
 
 class SearchPage extends Component {
@@ -15,7 +16,7 @@ class SearchPage extends Component {
     render () {
       const { videoList, userInput } = this.props;
       console.log(" youtube data", videoList)
-      let videoElList = videoList.map((vid) => (<img key={vid.id.videoId} src={vid.snippet.thumbnails.high.url} alt="video-pic" />));
+      let videoElList = videoList.map((vid) => (<Link to={`/videos/${vid.id.videoId}`}><img key={vid.id.videoId} src={vid.snippet.thumbnails.high.url} alt="video-pic" /></Link>));
       console.log("youtube thumbnail search", videoElList);
         return (
           <form className="search-form">

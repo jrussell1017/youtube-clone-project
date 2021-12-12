@@ -5,6 +5,7 @@ import { Route, Routes, Link } from "react-router-dom";
 // Component
 import HomePage from "./component/home/HomePage";
 import AboutPage from "./component/about/AboutPage";
+import IndividualVideoPage from "./component/IndividualVideoPage"
 
 
 // Data
@@ -38,6 +39,7 @@ class App extends Component {
           <Routes>
             <Route exact path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage team={team} />} />
+            <Route path="/videos/:id" element={<IndividualVideoPage {...this.props}/>}/>
           </Routes>
         </div>
     
