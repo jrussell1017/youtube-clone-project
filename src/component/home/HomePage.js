@@ -16,10 +16,11 @@ class HomePage extends Component {
           userInput: e.target.value,
         })
       }
-
-    handleYoutubeData = (e) => {
-        e.preventDefault();
-        const { userInput } = this.state;
+    
+    handleSubmit = (e) => {
+      e.preventDefault();
+      const { userInput } = this.state;
+      if(userInput !== ""){
         fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)
         .then((res)=>{
           return res.json();
@@ -30,8 +31,29 @@ class HomePage extends Component {
           this.setState({
             videoList: data.items,
           })
-        })
+        });
+        this.setState({
+          userInput: ""
+        });
       }
+    }
+
+    // handleYoutubeData = (e) => {
+    //     console.log(e)
+    //     e.preventDefault();
+    //     const { userInput } = this.state;
+    //     fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${userInput}&type=video&key=${process.env.REACT_APP_API_KEY}`)
+    //     .then((res)=>{
+    //       return res.json();
+    //     })
+    //     .then((data)=>{
+    //       console.log("youtube data", data);
+    //       console.log("youtube thumbnails", data.items);
+    //       this.setState({
+    //         videoList: data.items,
+    //       })
+    //     })
+    //   }
 
 
 
@@ -44,7 +66,8 @@ class HomePage extends Component {
                 userInput={userInput} 
                 videoList={videoList}
                 handleSearchValue={this.handleSearchValue}
-                handleYoutubeData={this.handleYoutubeData}
+                // handleYoutubeData={this.handleYoutubeData}
+                handleSubmit={this.handleSubmit}
                 />
 
             </div>

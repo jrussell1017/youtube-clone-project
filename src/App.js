@@ -5,14 +5,9 @@ import { Route, Switch, Link } from "react-router-dom";
 // Component
 import HomePage from "./component/home/HomePage";
 import AboutPage from "./component/about/AboutPage";
-import IndividualVideoPage from "./component/IndividualVideoPage"
+import IndividualVideoPage from "./component/videos/IndividualVideoPage"
 
 
-
-// NavBar
-//    Youtube
-//    Home
-//    About
 
 class App extends Component {
   render() {
@@ -33,7 +28,6 @@ class App extends Component {
             <Route path="/videos/:id" component={IndividualVideoPage}/>
           </Switch>
         </div>
-    
     );
   }
 }
