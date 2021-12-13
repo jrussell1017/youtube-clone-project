@@ -1,5 +1,6 @@
 import { Component } from "react";
 import AboutTeam from "./AboutTeam";
+import { team } from "../../data/team.js" 
 
 class AboutPage extends Component {
     // constructor() {
@@ -18,11 +19,9 @@ class AboutPage extends Component {
     // }
 
     render() {
-        const { team } = this.props
         const teamList = team.map((member) => (
             <AboutTeam key={member.id} member={member} />
         ))
-        console.log("")
         return(
             <section className="about-team">
              <h1>About Us</h1>
