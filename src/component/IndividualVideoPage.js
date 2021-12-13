@@ -1,5 +1,6 @@
 import { Component } from "react";
 import YouTube from "react-youtube";
+import "./videoPage.css";
 
 class IndividualVideoPage extends Component {
   constructor(props) {
@@ -36,44 +37,61 @@ class IndividualVideoPage extends Component {
   };
 
   render() {
-    
-
     return (
-      <div>
-        <div><YouTube videoId={this.props?.match.params.id} /></div>
+      <div id="individual-video-page">
+        <div id="video-container">
+          <YouTube videoId={this.props?.match.params.id} />
+        </div>
         <hr />
-        <form onSubmit={this.handleFormSubmit}>
-          <label htmlFor="user-name">Name</label>
-          <input
-            type="text"
-            name="user-name"
-            id="user-name"
-            placeholder="Name..."
-            value={this.state.userName}
-            onChange={this.handleUserName}
-          />
-          <label htmlFor="user-comment">Comment</label>
-          <input
-            type="text"
-            name="user-comment"
-            id="user-comment"
-            placeholder="..."
-            value={this.state.userComment}
-            onChange={this.handleUserComment}
-          />
-          <button type="submit">Submit</button>
-        </form>
+        <div id="form-container">
+          <form onSubmit={this.handleFormSubmit}>
+            <div>
+              <label htmlFor="user-name">Name:</label>
+            </div>
+            <input
+              type="text"
+              name="user-name"
+              id="user-name"
+              placeholder="Enter username here..."
+              value={this.state.userName}
+              onChange={this.handleUserName}
+            />
+            <div>
+              <label htmlFor="user-comment">Comment:</label>
+            </div>
+            <input
+              type="text"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Enter a comment here..."
+              value={this.state.userComment}
+              onChange={this.handleUserComment}
+            />
+            <div>
+              <button id="comment-button" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+        <br />
         <hr width="75%" />
+        <div id="comment-section-container">
+          <h1>Comment Section</h1>
+        </div>
         <ul>
           {this.state.commentSection.map((content) => {
-            let user = Object.keys(content)[0]
+            let user = Object.keys(content)[0];
             // console.log(Object.keys(content))
-            return(
+            return (
               <div>
                 <li>
-                  {user}
-                  {content[user]}
+                  <div>
+                    <strong>{user}: </strong>
+                  </div>
+                  <div>{content[user]}</div>
                 </li>
+                <hr width="50%" />
               </div>
             );
           })}
