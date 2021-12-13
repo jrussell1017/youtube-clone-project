@@ -7,8 +7,6 @@ import { Link } from "react-router-dom";
 class SearchPage extends Component {
     render () {
       const { videoList, userInput } = this.props;
-      console.log("youtube data", videoList)
-
       let videoElList = videoList.map((vid) => (
         <Link to={`/videos/${vid.id.videoId}`}>
           <img
@@ -18,8 +16,6 @@ class SearchPage extends Component {
           />
         </Link>
       ));
-      // console.log("youtube thumbnail search", videoElList);
-      console.log("input", userInput)
       return (
         <form className="search-form" onSubmit={this.props.handleSubmit}>
           <input
@@ -30,13 +26,7 @@ class SearchPage extends Component {
             onChange={this.props.handleSearchValue}
             value={userInput}
           />
-          <button 
-          className="submitbtn" 
-          type="submit" 
-          // onClick={this.props.handleYoutubeData}
-          >
-            Search
-          </button>
+          <button className="submitbtn" type="submit">Search</button>
           <SearchList videoElList={videoElList} />
         </form> 
       )  

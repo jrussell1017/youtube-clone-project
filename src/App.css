@@ -1,11 +1,24 @@
 nav {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  align-items: center;
+  /* grid-template-columns: repeat(3, 1fr); */
   background-color: red;
   color: white;
+  padding-left: 15px;
+  margin: 20px;
+  
 }
 
 nav a {
   color: white;
   text-decoration: none;
 }
+
+.nav-link {
+  margin-left: 25px;
+}
+
+/* .about-page {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+} */
