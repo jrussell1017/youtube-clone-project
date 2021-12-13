@@ -1,5 +1,5 @@
 import { Component } from "react";
-
+import './searchList.css';
 
 class SearchList extends Component {
   // constructor(){
@@ -8,9 +8,12 @@ class SearchList extends Component {
   
   render() {
     const { videoElList } = this.props;
+    const paragraph = (<div className="search-results">
+    <p>No Search Results Yet!, Please submit a search above!</p>  
+</div>);
       return (
         <aside className="search-list">
-           {videoElList}
+           {videoElList.length ? videoElList : paragraph}
         </aside>  
       )  
     }

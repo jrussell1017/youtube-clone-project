@@ -37,7 +37,7 @@ class HomePage extends Component {
         const { videoList, userInput } = this.state;
         return(
             <div>
-                <h1>Home Page</h1>
+                {/* <h1>Home Page</h1> */}
                 <SearchPage 
                 userInput={userInput} 
                 videoList={videoList}

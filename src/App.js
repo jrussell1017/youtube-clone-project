@@ -30,14 +30,14 @@ class App extends Component {
         <div>
           {/* NavBar */}
           <nav>
-            <p>Youtube</p>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
+            <p><strong>Youtube</strong></p>
+            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/about" className="nav-link">About</Link>
           </nav>
           {/* Routes */}
           <Routes>
             <Route exact path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage team={team} />} />
+            <Route className="about-page" path="/about" element={<AboutPage team={team} />} />
           </Routes>
         </div>
     

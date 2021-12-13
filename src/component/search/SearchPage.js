@@ -14,8 +14,8 @@ class SearchPage extends Component {
     
     render () {
       const { videoList, userInput } = this.props;
-      console.log(" youtube data", videoList)
-      let videoElList = videoList.map((vid) => (<img key={vid.id.videoId} src={vid.snippet.thumbnails.high.url} alt="video-pic" />));
+      console.log("youtube data", videoList)
+      let videoElList = videoList.map((vid) => (<img className="single-video" key={vid.id.videoId} src={vid.snippet.thumbnails.medium.url} alt="video-pic" />));
       console.log("youtube thumbnail search", videoElList);
         return (
           <form className="search-form">
@@ -28,9 +28,9 @@ class SearchPage extends Component {
               value={userInput}
             />
             <button className="submitbtn" type="submit" onClick={this.props.handleYoutubeData}>Search</button>
-            <div className="search-results">
+            {/* <div className="search-results">
                 <p>No Search Results Yet!, Please submit a search above!</p>  
-            </div> 
+            </div>  */}
             <SearchList videoElList={videoElList} />
           </form> 
         )  

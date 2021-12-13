@@ -1,5 +1,6 @@
 import { Component } from "react";
 import AboutTeam from "./AboutTeam";
+import "./About.css"
 
 class AboutPage extends Component {
     // constructor() {
@@ -25,8 +26,8 @@ class AboutPage extends Component {
         console.log("")
         return(
             <section className="about-team">
-             <h1>About Us</h1>
-             <div className="teams-info">{teamList}</div>
+              <h1>About Us</h1>
+              <div className="teams-info">{teamList}</div>
             </section>
         )
     }
