@@ -10,22 +10,15 @@ import AboutPage from "./component/about/AboutPage";
 // Data
 import { team } from "./data/team.js" 
 
-// NavBar
-//    Youtube
-//    Home
-//    About
-
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       team,
     }
-    // console.log(team)
   }
   render() {
     const { team } = this.state;
-    // console.log(team)
     return (
         <div>
           {/* NavBar */}
@@ -40,7 +33,6 @@ class App extends Component {
             <Route path="/about" element={<AboutPage team={team} />} />
           </Routes>
         </div>
-    
     );
   }
 }
