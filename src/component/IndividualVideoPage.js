@@ -36,13 +36,11 @@ class IndividualVideoPage extends Component {
   };
 
   render() {
-
-    console.log(Object.values(this.state.commentSection));
-    console.log(this.props)
+    
 
     return (
       <div>
-        <div>{/* <YouTube videoId={this.props.match.params.id} />; */}</div>
+        <div><YouTube videoId={this.props?.match.params.id} /></div>
         <hr />
         <form onSubmit={this.handleFormSubmit}>
           <label htmlFor="user-name">Name</label>
@@ -69,7 +67,7 @@ class IndividualVideoPage extends Component {
         <ul>
           {this.state.commentSection.map((content) => {
             let user = Object.keys(content)[0]
-            console.log(Object.keys(content))
+            // console.log(Object.keys(content))
             return(
               <div>
                 <li>
