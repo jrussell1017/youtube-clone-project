@@ -18,18 +18,20 @@ class SearchPage extends Component {
         </Link>
       ));
       return (
-        <form className="search-form" onSubmit={this.props.handleSubmit}>
-          <input
-            className="input"
-            type="text"
-            id="search"
-            placeholder="Search..."
-            onChange={this.props.handleSearchValue}
-            value={userInput}
-          />
-          <button className="submitbtn" type="submit">Search</button>
+        <div>
+          <form className="search-form" onSubmit={this.props.handleSubmit}>
+            <input
+              className="input"
+              type="text"
+              id="search"
+              placeholder="Search..."
+              onChange={this.props.handleSearchValue}
+              value={userInput}
+            />
+            <button className="submitbtn" type="submit">Search</button>
+          </form>
           <SearchList videoElList={videoElList} />
-        </form> 
+        </div> 
       )  
     } 
 }

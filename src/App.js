@@ -16,9 +16,9 @@ class App extends Component {
       <div>
         {/* NavBar */}
         <nav>
-          <p>Youtube</p>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
+          <p><strong>Youtube</strong></p>
+          <Link className="nav-link" to="/">Home</Link>
+          <Link className="nav-link" to="/about">About</Link>
           <a href="https://clone-d812e.firebaseapp.com/">SportsMode</a>
         </nav>
         {/* Routes */}

@@ -38,6 +38,8 @@ class IndividualVideoPage extends Component {
 
   render() {
     return (
+      <div>
+        <div ><YouTube videoId={this.props?.match.params.id} /></div>
       <div id="individual-video-page">
         <div id="video-container">
           <YouTube videoId={this.props?.match.params.id} />
