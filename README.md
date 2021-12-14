@@ -1,12 +1,13 @@
 # Group Members
 - Hector Ilarraza (Team Lead)
-- Xiaoming Yang
-- James Russell
+- Xiaoming Yang (Visual Lead)
+- James Russell (Tech Lead)
 
 # Project Links
 
-- [Youbube Clone // Github Repository](https://github.com/jrussell1017/youtube-clone-project)
+- [Youtube Clone // Github Repository](https://github.com/jrussell1017/youtube-clone-project)
 - [Youtube Clone // Deployed Netlify Site](https://youtube-clone-34abc4.netlify.app/)
+- [Youtube Clone // Trello board site](https://trello.com/b/jiWc95Rt/youtube-clone-project-kanban-board)
 
 
 # Getting Started with Create React App

@@ -26,7 +26,7 @@ class HomePage extends Component {
         })
         .then((data)=>{
           // console.log("youtube data", data);
-          // console.log("youtube thumbnails", data.items);
+          console.log("youtube thumbnails", data.items);
           this.setState({
             videoList: data.items,
           })
@@ -39,6 +39,7 @@ class HomePage extends Component {
 
     render() {
         const { videoList, userInput } = this.state;
+        console.log("youtube map", videoList);
         return(
             <div>
                 <SearchPage 

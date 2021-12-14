@@ -14,6 +14,7 @@ class SearchPage extends Component {
             src={vid.snippet.thumbnails.high.url}
             alt="video-pic"
           />
+          {vid.snippet.title}
         </Link>
       ));
       return (
