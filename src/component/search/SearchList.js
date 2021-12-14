@@ -2,7 +2,6 @@ import { Component } from "react";
 import './searchList.css';
 
 class SearchList extends Component {
-
   render() {
     const { videoElList } = this.props;
       return (
