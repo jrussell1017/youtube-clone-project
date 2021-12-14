@@ -40,7 +40,7 @@ class IndividualVideoPage extends Component {
 
     return (
       <div>
-        <div><YouTube videoId={this.props?.match.params.id} /></div>
+        <div ><YouTube videoId={this.props?.match.params.id} /></div>
         <hr />
         <form onSubmit={this.handleFormSubmit}>
           <label htmlFor="user-name">Name</label>
